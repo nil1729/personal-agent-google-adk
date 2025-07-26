@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environments
+.venv
+.env
+!frontend/.env
+
+# Other
+output/output.json
+**/.DS_Store
+logs/
+digest.txt
+#*.json
+
+git-author-rewrite.sh
+firebase-credentials.json
+
+.idea/
+.env.*
+
+all_code_files_dump.txt
+dump.py
+
+!.env.example
+
+credentials
