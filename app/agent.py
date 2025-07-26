@@ -1,13 +1,13 @@
 from google.adk.agents import Agent
 
-from tools.gmail import (
+from app.tools.gmail import (
     list_messages,
     get_unread_emails,
     get_important_emails,
     get_current_datetime,
 )
 
-from sub_agents.gmail import (
+from app.sub_agents.gmail import (
     time_intelligence_agent,
     content_analysis_agent,
     search_filtering_agent,

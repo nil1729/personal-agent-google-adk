@@ -1,6 +1,6 @@
 from google.adk.agents import Agent
 
-from tools.gmail import (
+from app.tools.gmail import (
     list_labels,
     get_label_details,
     find_label_by_name,

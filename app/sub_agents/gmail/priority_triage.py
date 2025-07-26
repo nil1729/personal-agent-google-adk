@@ -1,6 +1,6 @@
 from google.adk.agents import Agent
 
-from tools.gmail import (
+from app.tools.gmail import (
     list_messages,
     search_emails,
     get_recent_emails,

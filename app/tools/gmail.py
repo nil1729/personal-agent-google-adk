@@ -4,7 +4,7 @@ from typing import Dict, Any, Optional
 
 from googleapiclient.errors import HttpError
 
-from clients.gmail import get_gmail_service
+from app.clients.gmail import get_gmail_service
 
 
 def _parse_email_address(address_str: str) -> Dict[str, str]:
