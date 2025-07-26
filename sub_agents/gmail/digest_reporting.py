@@ -1,13 +1,11 @@
 from google.adk.agents import Agent
 
-from clients.gmail import (
+from tools.gmail import (
     list_messages,
     search_emails,
     get_recent_emails,
-    get_emails_from_sender,
     get_unread_emails,
     get_important_emails,
-    get_emails_with_attachments,
     get_current_datetime,
     get_today_emails,
     get_label_statistics,

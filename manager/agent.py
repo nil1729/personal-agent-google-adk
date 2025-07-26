@@ -1,6 +1,6 @@
 from google.adk.agents import Agent
 
-from clients.gmail import (
+from tools.gmail import (
     list_messages,
     get_unread_emails,
     get_important_emails,
