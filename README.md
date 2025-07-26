@@ -36,13 +36,13 @@ The system automatically routes queries to specialized sub-agents based on conte
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd personal-agent
+git clone https://github.com/nil1729/personal-agent-google-adk
+cd personal-agent-google-adk
 ```
 
 2. Install dependencies:
 ```bash
-pip install -e .
+uv sync --frozen
 ```
 
 3. Set up Gmail API credentials:
@@ -60,54 +60,25 @@ export GMAIL_APP_TOKEN_FILE="gmail_token.json"  # Optional, defaults to gmail_to
 
 ### First Run
 
-```python
-from app.agent import root_agent
 
-# The agent will guide you through OAuth flow on first run
-response = root_agent.run("Show me today's important emails")
+
+### First Run
+
+1. Start the ADK web interface:
+```bash
+adk web
 ```
 
-## 📚 Usage Examples
-
-### Time-Based Queries
-```python
-# Natural language time processing
-root_agent.run("Show me emails from last week")
-root_agent.run("What happened in my inbox today?")
-root_agent.run("Recent attachments from my team")
+2. Open your browser and navigate to:
+```
+http://localhost:8000
 ```
 
-### Smart Search
-```python
-# Intelligent sender resolution
-root_agent.run("Latest emails from Interview Query")
-root_agent.run("Find emails about the project from Sarah")
-root_agent.run("Show me emails from my boss this month")
-```
+3. You'll see the Gmail Manager agent interface where you can chat directly with the system using natural language.
 
-### Content Analysis
-```python
-# Email summarization and extraction
-root_agent.run("Summarize my unread emails")
-root_agent.run("Extract action items from recent team emails")
-root_agent.run("What are the key decisions from this week?")
-```
+4. On first run, you'll be guided through the Gmail OAuth authentication flow to connect your account.
 
-### Organization & Insights
-```python
-# Label management and insights
-root_agent.run("Show me my label statistics")
-root_agent.run("Which labels have the most unread emails?")
-root_agent.run("Generate my daily email digest")
-```
-
-### Priority Management  
-```python
-# Email triage and prioritization
-root_agent.run("What needs my attention today?")
-root_agent.run("Show me urgent emails from clients")
-root_agent.run("Triage my inbox by priority")
-```
+The agent will automatically understand your requests and delegate them to the appropriate specialized sub-agents based on context and keywords.
 
 ## 🏗️ Architecture
 
