@@ -7,6 +7,7 @@ from app.tools.gmail import (
     get_important_emails,
     get_emails_with_attachments,
 )
+from app.core.config import settings
 
 # =============================================================================
 # CONTENT ANALYSIS & SUMMARIZATION AGENT
@@ -14,7 +15,7 @@ from app.tools.gmail import (
 
 content_analysis_agent = Agent(
     name="content_analyzer",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Specialized agent for email content analysis, summarization, and intelligent extraction",
     instruction="""
     You are a content analysis expert that processes email content to extract insights, summaries, and actionable information.

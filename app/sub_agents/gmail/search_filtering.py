@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 
+from app.core.config import settings
 from app.tools.gmail import (
     search_emails,
     get_emails_from_sender,
@@ -16,7 +17,7 @@ from app.tools.gmail import (
 
 search_filtering_agent = Agent(
     name="search_specialist",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Advanced search and filtering specialist with intelligent query processing and smart sender resolution",
     instruction="""
     You are a search intelligence expert that handles complex email searches with advanced pattern recognition and intelligent sender resolution.

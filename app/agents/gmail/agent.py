@@ -16,6 +16,7 @@ from app.sub_agents.gmail import (
     digest_reporting_agent,
     security_monitoring_agent,
 )
+from app.core.config import settings
 
 # =============================================================================
 # ENHANCED ROOT AGENT WITH INTELLIGENT DELEGATION
@@ -23,7 +24,7 @@ from app.sub_agents.gmail import (
 
 root_agent = Agent(
     name="gmail_manager",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Intelligent Gmail Management System with Specialized Sub-Agent Delegation",
     instruction="""
     You are an intelligent Gmail management system that coordinates specialized sub-agents to provide comprehensive email assistance.

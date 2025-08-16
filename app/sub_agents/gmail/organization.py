@@ -10,7 +10,7 @@ from app.tools.gmail import (
     get_emails_by_label,
     get_label_statistics,
 )
-
+from app.core.config import settings
 
 # =============================================================================
 # LABEL & ORGANIZATION AGENT
@@ -18,7 +18,7 @@ from app.tools.gmail import (
 
 organization_agent = Agent(
     name="label_organizer",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Email organization specialist focused on labels, categorization, and mailbox structure",
     instruction="""
     You are an email organization expert that manages labels, categories, and mailbox structure for optimal email workflow.
