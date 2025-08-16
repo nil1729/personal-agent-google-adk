@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 
+from app.core.config import settings
 from app.tools.gmail import (
     list_messages,
     search_emails,
@@ -16,7 +17,7 @@ from app.tools.gmail import (
 
 priority_triage_agent = Agent(
     name="priority_manager",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Email priority assessment and triage specialist for intelligent email management",
     instruction="""
     You are a priority management expert that helps users focus on the most important emails and manage their email workflow efficiently.

@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 
+from app.core.config import settings
 from app.tools.gmail import (
     list_messages,
     search_emails,
@@ -18,7 +19,7 @@ from app.tools.gmail import (
 
 digest_reporting_agent = Agent(
     name="digest_generator",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Email digest and reporting specialist for periodic summaries and insights",
     instruction="""
     You are a reporting specialist that creates comprehensive email digests, summaries, and analytical reports.

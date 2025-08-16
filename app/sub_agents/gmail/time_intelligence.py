@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 
+from app.core.config import settings
 from app.tools.gmail import (
     search_emails,
     get_recent_emails,
@@ -15,7 +16,7 @@ from app.tools.gmail import (
 
 time_intelligence_agent = Agent(
     name="time_intelligence",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Specialized agent for time-aware email operations and date calculations",
     instruction="""
     You are a time intelligence specialist that handles all date/time-related email queries with precision and context awareness.

@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 
+from app.core.config import settings
 from app.tools.gmail import (
     search_emails,
     get_recent_emails,
@@ -14,7 +15,7 @@ from app.tools.gmail import (
 
 security_monitoring_agent = Agent(
     name="security_monitor",
-    model="gemini-2.5-flash",
+    model=settings.agent_models.root,
     description="Email security and monitoring specialist for threat detection and safety analysis",
     instruction="""
     You are a security specialist that monitors emails for potential threats, suspicious patterns, and privacy concerns.
